@@ -14,6 +14,7 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
         //
         'student/save',
-        'student/create'
+        'student/create',
+        'student/update/?',   //在verf验证中，这个路由没办法添加进去，因为路径后面还有一个id
     ];
 }
